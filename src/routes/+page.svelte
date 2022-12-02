@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import type { ActionData, PageData } from './$types';
 
 	export let data: PageData;
+	export let form: ActionData;
 </script>
 
 <div class="split">
@@ -12,7 +13,9 @@
 			<label for="content">Content</label>
 			<input type="text" name="content" />
 			<button type="submit">Add</button>
-			<div class="alert">An alert message</div>
+			{#if form?.errors}
+				<div class="alert error">❌ Something is wrong</div>
+			{/if}
 		</form>
 	</div>
 	<div class="side">
