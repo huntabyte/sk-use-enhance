@@ -12,6 +12,7 @@
 			<label for="content">Content</label>
 			<input type="text" name="content" />
 			<button type="submit">Add</button>
+			<div class="alert">An alert message</div>
 		</form>
 	</div>
 	<div class="side">
@@ -29,3 +30,6 @@
 		{/each}
 	</div>
 </div>
+
+<style>
+</style>
