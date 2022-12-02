@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	background-color: #24292e;
+	color: white;
+	font-family: sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+.split {
+	display: flex;
+}
+
+.side {
+	flex: 1;
+	padding: 1rem;
+}
+
+.form-create {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-create label {
+	font-size: 14px;
+	padding: 4px 0 2px 0;
+}
+
+.form-create input {
+	background-color: #24292e;
+	border: 2px solid white;
+	border-radius: 6px;
+	height: 2rem;
+	padding: 0.5rem;
+	color: white;
+	margin-bottom: 4px;
+}
+
+button {
+	background-color: white;
+	border: none;
+	margin-top: 0.5rem;
+	border-radius: 6px;
+	height: 2rem;
+	font-weight: 600;
+}
+button:hover {
+	background-color: #f3f3f3;
+	cursor: pointer;
+	color: black;
+}
+
+.note {
+	display: flex;
+	justify-content: space-between;
+	background-color: #fae874;
+	color: black;
+	border-radius: 6px;
+	padding: 0.5rem;
+	margin-bottom: 0.75rem;
+}
+
+.note button {
+	background-color: inherit;
+	margin: 0;
+}
+
+.note button:hover {
+	background-color: #f5de49;
+}
+
+.note p {
+	font-size: 14px;
+}
