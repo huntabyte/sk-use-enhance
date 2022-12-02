@@ -13,8 +13,8 @@
 			<label for="content">Content</label>
 			<input type="text" name="content" />
 			<button type="submit">Add</button>
-			{#if form?.errors}
-				<div class="alert error">❌ Something is wrong</div>
+			{#if form?.errorMsg}
+				<div class="alert error">{form.errorMsg}</div>
 			{/if}
 		</form>
 	</div>

@@ -1,3 +1,4 @@
+import { invalid } from "@sveltejs/kit";
 import type { Actions, PageServerLoad } from "./$types";
 
 type Note = {
@@ -22,11 +23,18 @@ export const actions: Actions = {
 	create: async ({ request }) => {
 		const data = Object.fromEntries(await request.formData()) as Note;
 
+		if (data.title.length < 1) {
+			return invalid(400, {
+				data: data,
+				errorMsg: "❌ Title must not be empty!",
+			});
+		}
+
 		notes.push(data);
 
 		return {
-			success: true,
-			errors: false,
+			data: undefined,
+			errorMsg: undefined,
 		};
 	},
 	delete: async ({ request }) => {
@@ -35,8 +43,8 @@ export const actions: Actions = {
 		notes = notes.filter((note) => note.title !== data.title);
 
 		return {
-			success: true,
-			errors: false,
+			data: undefined,
+			errorMsg: undefined,
 		};
 	},
 };
