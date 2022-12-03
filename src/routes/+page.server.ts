@@ -21,6 +21,7 @@ export const load: PageServerLoad = () => {
 
 export const actions: Actions = {
 	create: async ({ request }) => {
+		console.log("Hit action");
 		const data = Object.fromEntries(await request.formData()) as Note;
 
 		if (data.title.length < 1) {
